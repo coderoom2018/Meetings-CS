@@ -11,14 +11,9 @@ export default class FaqContainer extends Component {
     return (
       <div id="container_content">
         <h3>Faq Containter</h3>
-        <Faq />
-        <Faq />
-        <Faq />
-        <Faq />
-        <Faq />
-        <Faq />
-        <Faq />
-        <Faq />
+        {this.props.data.map((faq, id) => (
+          <Faq faq={faq} key={id} />
+        ))}
       </div>
     )
   }

@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "category": "북클럽",
+      "title": "title1",
+      "description": "description1"
+    },
+    {
+      "id": 2,
+      "category": "북클럽",
+      "title": "title2",
+      "description": "description2"
+    },
+    {
+      "id": 3,
+      "category": "북클럽",
+      "title": "title3",
+      "description": "description3"
+    },
+    {
+      "id": 1,
+      "category": "신청/환불",
+      "title": "title1",
+      "description": "description1"
+    },
+    {
+      "id": 2,
+      "category": "신청/환불",
+      "title": "title2",
+      "description": "description2"
+    },
+    {
+      "id": 3,
+      "category": "신청/환불",
+      "title": "title3",
+      "description": "description3"
+    },
+    {
+      "id": 1,
+      "category": "독후감",
+      "title": "title1",
+      "description": "description1"
+    },
+    {
+      "id": 2,
+      "category": "독후감",
+      "title": "title2",
+      "description": "description2"
+    },
+    {
+      "id": 3,
+      "category": "독후감",
+      "title": "title3",
+      "description": "description3"
+    },
+    {
+      "id": 1,
+      "category": "놀러가기",
+      "title": "title1",
+      "description": "description1"
+    },
+    {
+      "id": 2,
+      "category": "놀러가기",
+      "title": "title2",
+      "description": "description2"
+    },
+    {
+      "id": 3,
+      "category": "놀러가기",
+      "title": "title3",
+      "description": "description3"
+    },
+    {
+      "id": 1,
+      "category": "이벤트",
+      "title": "title1",
+      "description": "description1"
+    },
+    {
+      "id": 2,
+      "category": "이벤트",
+      "title": "title2",
+      "description": "description2"
+    },
+    {
+      "id": 3,
+      "category": "이벤트",
+      "title": "title3",
+      "description": "description3"
+    },
+    {
+      "id": 1,
+      "category": "아지트",
+      "title": "title1",
+      "description": "description1"
+    },
+    {
+      "id": 2,
+      "category": "아지트",
+      "title": "title2",
+      "description": "description2"
+    },
+    {
+      "id": 3,
+      "category": "아지트",
+      "title": "title3",
+      "description": "description3"
+    }
+  ]
+}
