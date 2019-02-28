@@ -8,16 +8,14 @@ export default class MeetingsContainer extends Component {
   }
 
   render() {
+
     return (
       <div id="container_content">
         <h3>MeetingsContainer</h3>
         <div id="meetings_container">
-          <Meeting />
-          <Meeting />
-          <Meeting />
-          <Meeting />
-          <Meeting />
-          <Meeting />
+          {this.props.data.map((meeting, id) => (
+            <Meeting meeting={meeting} key={id} />
+          ))}
         </div>
       </div>
     )

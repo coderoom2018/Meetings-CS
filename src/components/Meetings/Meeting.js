@@ -7,30 +7,32 @@ export default class Meeting extends Component {
   }
 
   render() {
+    const meeting = this.props.meeting
+
     return (
       <div id="meeting_content">
         <div className="meeting_header">
-          <img className="meeting_header-image" src="https://image.trevari.co.kr/644c7ede-bfc0-42cd-a071-c886440fad19.png"/>
+          <img className="meeting_header-image" src={meeting.image}/>
           <div className="meeting_header-description">
             <div className="meeting_header-description-title">
-              title
+              {meeting.header_title}
             </div>
             <div className="meeting_header-description-subTitle">
-              meeting_header-descriptionmeeting_
+              {meeting.header_subtitle}
             </div>  
           </div>
         </div>
         
         <div id="information">
           <div className="information_name">
-            name
+            {meeting.name}
           </div>
           <div className="information_details">
             <div className="informaion_details-location">
-              location
+              {meeting.location}
             </div>
             <div className="informaion_details-time">
-              time
+              {meeting.time}
             </div>
           </div>
         </div>

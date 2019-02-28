@@ -7,17 +7,19 @@ export default class Faq extends Component {
   }
 
   render() {
+    const faq = this.props.faq
+
     return (
       <div id="faq_content">
         <div className="faq_title">
           <span className="faq_title-q" >Q.</span>
-          <span className="faq_title-tapName">[북클럽]</span>
-          <span className="faq_title-title">titletitletitletitletitletitletitle</span>
+          <span className="faq_title-tapName">{`[${faq.category}]`}</span>
+          <span className="faq_title-title">{faq.title}</span>
         </div>
 
         <div className="faq_description">
           <div>
-            <p>faq_descriptionfaq_descriptionfaq_descriptionfaq_descriptionfaq_descriptionfaq_descriptionfaq_descriptionfaq_description</p>
+            <p>{faq.description}</p>
           </div>
         </div>
       </div>
