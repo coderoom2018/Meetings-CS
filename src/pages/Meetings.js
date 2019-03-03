@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Meetings.css';
-import MeetingContainer from './MeetingsContainer';
-import module from '../../utilities';
-import SearchMeetings from './SearchMeetings';
+import MeetingContainer from '../components/Meetings/MeetingsContainer';
+import module from '../utilities';
+import SearchMeetings from '../components/Meetings/SearchMeetings';
 
 export default class Meetings extends Component {
   state = {

@@ -1,21 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Head.css'
-
-// const styleHeader = {
-//   backgroundColor: '#fff',
-//   padding: '10px',
-//   textDecoration: 'none',
-//   position: 'fixed',
-//   width: '100%',
-//   zIndex: '2',
-//   top: '0',
-//   height: '30px',
-//   boxShadow: '0px 1px 7px 0px rgba(0, 0, 0, 0.4)',
-//   display: 'flex',
-//   transition: 'top 0.2s ease-in-out',
-// };
-
-
 
 export default class Head extends Component {
 
@@ -33,8 +18,10 @@ export default class Head extends Component {
         id="header" 
         >
         <div>
-          <button onClick={this._changeTabName} value="Meetings">Meetings</button>
-          <button onClick={this._changeTabName} value="Cs">Cs</button>
+          {/* <button onClick={this._changeTabName} value="Meetings">Meetings</button>
+          <button onClick={this._changeTabName} value="Cs">Cs</button> */}
+          <Link to="/"><button>Meetings</button></Link>
+          <Link to="cs"><button>Cs</button></Link>
         </div>
       </div>
     )

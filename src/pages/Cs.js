@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Cs.css';
-import FaqContainer from './FaqContainer';
-import module from '../../utilities';
+import FaqContainer from '../components/Cs/FaqContainer';
+import module from '../utilities';
 
 export default class Cs extends Component {
   state = {
