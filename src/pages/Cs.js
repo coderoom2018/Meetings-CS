@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './Cs.css';
 import FaqContainer from '../components/Cs/FaqContainer';
 import module from '../utilities';
+import { createBrowserHistory } from 'history';
+
+const history = createBrowserHistory();
 
 export default class Cs extends Component {
   state = {
@@ -17,28 +20,33 @@ export default class Cs extends Component {
     
     const searchData = await module.searchData;
     const data = await searchData("csData", this.state.tabName)
-    
+
     this.setState({ data })
   }
   
   _clickHandler_changeTab = async (event) => {
+    this.setState({ display: "none" })
     const tabName = event.target.value;
-    this.setState({ tabName })
+
+    this.setState({ tabName: tabName })
 
     const searchData = await module.searchData;
     const data = await searchData("csData", this.state.tabName)
     
-    this.setState({ data })
+    history.push({
+      pathname: '/cs',
+      search: `?category=${this.state.tabName}`,
+    })
+    this.setState({ data: data })
   }
 
   render() {
-    console.log("cs state.data: ", this.state.data)
 
     return (
       <div id="cs_content">
         <h1>Cs</h1>
         <div className="btn_container">
-          <button className="btn" onClick={this._clickHandler_changeTab} value="북클럽">북클럽</button>
+          <button className="btn" onClick={this._clickHandler_changeTab} value="북클럽" >북클럽</button>
           <button className="btn" onClick={this._clickHandler_changeTab} value="신청/환불">신청/환불</button>
           <button className="btn" onClick={this._clickHandler_changeTab} value="독후감">독후감</button>
           <button className="btn" onClick={this._clickHandler_changeTab} value="놀러가기">놀러가기</button>
@@ -47,7 +55,7 @@ export default class Cs extends Component {
         </div>
         
         <div>
-          <FaqContainer data={this.state.data}/>
+          <FaqContainer data={this.state.data} />
         </div>
       </div>
     )
