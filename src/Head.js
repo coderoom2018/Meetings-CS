@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Head.css'
-// import { Link } from
 
 export default class Head extends Component {
 
+  _changeTabName = (event) => {
+    const tabNamge = event.target.value
+
+    this.props._clickHandler_changeTabName(tabNamge)
+  }
+
   render() {
+      
     return (
-      <div id="head_content">
-        <h1>Head</h1>
+      <div id="header">
         <div>
-          <button>Meetings</button>
-          <button>Cs</button>
+          <Link to="/"><button>Meetings</button></Link>
+          <Link to="cs"><button>Cs</button></Link>
         </div>
       </div>
     )

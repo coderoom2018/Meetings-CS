@@ -26,9 +26,25 @@ export default module = function() {
 		}
 		
     return data.data;
-  }
+	}
+	
+	async function searchMeeings (url, target) {
+		const res = await fetch(`/${url}.json`);
+		let data = await res.json();
+		let newData = [];
+
+		for (var i = 0; i < data.data.length; i++) {
+			console.log("title: ", data.data[i])
+			if (data.data[i].header_title.includes(target)) {
+				newData.push(data.data[i])
+			}
+		}
+		data = await newData;
+
+		return data
+	}
 
   return {
-    searchData
+    searchData, searchMeeings
   }
 }()
