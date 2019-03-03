@@ -6,13 +6,12 @@ export default class Faq extends Component {
     super(props);
   }
 
-  _clickHandler_changeDisplay = (event) => {
+  _clickHandler_changeDisplay = () => {
     let display = document.getElementById(`${this.props.faq.title}`).style.display;
 
     display === "block"
       ? document.getElementById(`${this.props.faq.title}`).style.display = "none" 
       : document.getElementById(`${this.props.faq.title}`).style.display = "block"
-    
   }
 
   render() {
@@ -26,7 +25,7 @@ export default class Faq extends Component {
           <span className="faq_title-title">{faq.title}</span>
         </div>
 
-        <div id={faq.title} className="faq_description" style={{display:"block"}}>
+        <div id={faq.title} className="faq_description" style={{display:"none"}}>
           <div>
             <p>{faq.description}</p>
           </div>
