@@ -1,11 +1,3 @@
-// const searchData = async url => {
-//     const res = await fetch(`/${url}.json`);
-//     const data = await res.json();
-//     console.log(data)
-
-//     return data.data;
-// }
-
 export default module = function() {
 
   async function searchData (url, category) {
@@ -34,7 +26,6 @@ export default module = function() {
 		let newData = [];
 
 		for (var i = 0; i < data.data.length; i++) {
-			console.log("title: ", data.data[i])
 			if (data.data[i].header_title.includes(target)) {
 				newData.push(data.data[i])
 			}
