@@ -2,26 +2,27 @@
   width: 31%;
   display: block;
   margin: 0px 8px 32px;
+  /* position: relative; */
 }
 
 .meeting_header {
   height: 200px;
   width: 100%;
-  position: relative;
+  /* position: relative; */
 }
 
 .meeting_header-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 80%;
+  /* object-fit: cover; */
 }
 
 .meeting_header-description {
   background: rgba(0, 0, 0, 0.5);
-  bottom: 0px;
+  /* bottom: 0px; */
   color: white;
-  padding: 12px 16px;
-  position: absolute;
+  /* padding: 12px 16px; */
+  /* position: absolute; */
   width: 100%;
 }
 
@@ -32,11 +33,11 @@
 
 .meeting_header-description-subTitle {
   font-size: 14px;
-  line-height: 1.3;
+  /* line-height: 1.3; */
 }
 
 #information {
-  margin: 8px 0px;
+  /* margin: 8px 0px; */
 }
 
 .information_name {
