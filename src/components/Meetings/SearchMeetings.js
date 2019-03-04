@@ -32,6 +32,7 @@ export default class SearchMeetings extends Component {
       <div id="search_content">
         <div className="searchBar_container">
           <input
+            className="search_input"
             type="text"
             placeholder="클럽명 검색"
             onChange={this._updateInputValue}

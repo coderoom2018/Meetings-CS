@@ -15,9 +15,11 @@
 .category_btn {
   margin-bottom: 10px;
   margin-right: 10px;
+  font-size: 16px;
   font-weight: 400;
   text-align: center;
   color: #ff8906;
   border: 1px solid #ff8906;
   cursor: pointer;
+  padding: 6px 12px 6px 12px;
 }
