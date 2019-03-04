@@ -1,0 +1,7 @@
+.search_btn {
+  background: #ff8906;
+  border-color: #ff8906;
+  display: inline-block;
+  color: white;
+  cursor: pointer;
+}

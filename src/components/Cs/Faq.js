@@ -49,9 +49,7 @@ export default class Faq extends Component {
           className="faq_description"
           style={{ display: `none` }}
         >
-          <div>
-            <p>{faq.description}</p>
-          </div>
+          <div><p>{faq.description}</p></div>
         </div>
       </div>
     );
