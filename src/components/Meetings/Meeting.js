@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import './Meeting.css';
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory();
 
 export default class Meeting extends Component {
-  constructor(props) {
-    super(props);
+
+  _clickHandler_routingPage = () => {
+    const meeting = this.props.meeting
+
+    history.push({
+      pathname: "/meetings",
+      search: `?id=${meeting.id}`
+    });
   }
 
   render() {
     const meeting = this.props.meeting
 
     return (
-      <div id="meeting_content">
+      <div id="meeting_content" onClick={this._clickHandler_routingPage}>
         <div className="meeting_header">
           <img className="meeting_header-image" src={meeting.image}/>
           <div className="meeting_header-description">
