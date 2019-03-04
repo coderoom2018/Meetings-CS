@@ -46,8 +46,8 @@ export default class Head extends Component {
   render() {
     return (
       <div className={classnames("navbar2", {"navbar--hidden2": !this.state.visible})}>
-        <Link to="/"><span className="navbar_btn">Meetings</span></Link>
-        <Link to="cs"><span className="navbar_btn">Cs</span></Link>
+        <Link to="/"><span className="navbar_btn">독서 모임</span></Link>
+        <Link to="cs"><span className="navbar_btn">자주 묻는 질문</span></Link>
       </div>
     );
   }
