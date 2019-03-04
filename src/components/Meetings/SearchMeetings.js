@@ -33,7 +33,7 @@ export default class SearchMeetings extends Component {
         <div className="searchBar_container">
           <input
             type="text"
-            placeholder="검색어를 입력하세요"
+            placeholder="클럽명 검색"
             onChange={this._updateInputValue}
             value={this.state.inputValue}
             onKeyPress={this._keyPressHandler__searchMeetings}

@@ -1,3 +1,8 @@
+.searchBar_container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .search_btn {
   background: #ff8906;
   border-color: #ff8906;
