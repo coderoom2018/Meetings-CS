@@ -1,7 +1,7 @@
 export default module = function() {
 
-  async function searchData (url, category) {
-    const res = await fetch(`/${url}.json`);
+  async function getData (file, category) {
+    const res = await fetch(`/${file}.json`);
     let data = await res.json();
 
     if (category !== undefined) {
@@ -20,8 +20,8 @@ export default module = function() {
     return data.data;
 	}
 	
-	async function searchMeeings (url, target) {
-		const res = await fetch(`/${url}.json`);
+	async function searchMeeings (file, target) {
+		const res = await fetch(`/${file}.json`);
 		let data = await res.json();
 		let newData = [];
 
@@ -36,6 +36,6 @@ export default module = function() {
 	}
 
   return {
-    searchData, searchMeeings
+    getData, searchMeeings
   }
 }()

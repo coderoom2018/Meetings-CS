@@ -14,8 +14,8 @@ export default class Meetings extends Component {
   };
 
   _getData = async () => {
-    const searchData = await module.searchData;
-    const data = await searchData("meetingsData");
+    const getData = await module.getData;
+    const data = await getData("meetingsData");
 
     this.setState({ data });
   };

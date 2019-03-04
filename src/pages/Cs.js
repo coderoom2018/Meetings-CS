@@ -17,8 +17,8 @@ export default class Cs extends Component {
   }
 
   _getData = async () => {
-    const searchData = await module.searchData;
-    const data = await searchData("csData", this.state.tabName)
+    const getData = await module.getData;
+    const data = await getData("csData", this.state.tabName)
 
     this.setState({ data })
   }
@@ -29,8 +29,8 @@ export default class Cs extends Component {
 
     this.setState({ tabName: tabName })
 
-    const searchData = await module.searchData;
-    const data = await searchData("csData", this.state.tabName)
+    const getData = await module.getData;
+    const data = await getData("csData", this.state.tabName)
     
     history.push({
       pathname: '/cs',
