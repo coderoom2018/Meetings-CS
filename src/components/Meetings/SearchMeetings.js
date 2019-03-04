@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import "./SearchMeetings.css";
 
 export default class SearchMeetings extends Component {
   state = {
     inputValue: ""
   };
 
-  _clickHandler_searchMeetings = (event) => {
+  _clickHandler_searchMeetings = () => {
     const target = this.state.inputValue;
 
     this.props._searchMeetings(target);
@@ -13,7 +14,7 @@ export default class SearchMeetings extends Component {
     this.setState({ inputValue: "" })
   };
 
-  _updateInputValue = event => {
+  _updateInputValue = (event) => {
     this.setState({ inputValue: event.target.value });
   };
 
@@ -25,18 +26,20 @@ export default class SearchMeetings extends Component {
       this.setState({ inputValue: "" })
     }
   }
-  render() {
 
+  render() {
     return (
-      <div>
-        <input
-          type="text"
-          placeholder="검색어를 입력하세요"
-          onChange={this._updateInputValue}
-          value={this.state.inputValue}
-          onKeyPress={this._keyPressHandler__searchMeetings}
-        />
-        <button onClick={this._clickHandler_searchMeetings}>검색</button>
+      <div id="search_content">
+        <div className="searchBar_container">
+          <input
+            type="text"
+            placeholder="검색어를 입력하세요"
+            onChange={this._updateInputValue}
+            value={this.state.inputValue}
+            onKeyPress={this._keyPressHandler__searchMeetings}
+          />
+          <button className="search_btn" onClick={this._clickHandler_searchMeetings}>검색</button>
+        </div>
       </div>
     );
   }

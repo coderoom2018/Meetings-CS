@@ -13,45 +13,41 @@ export default class Head extends Component {
     };
   }
 
-  _changeTabName = event => {
-    const tabNamge = event.target.value;
-    this.props._clickHandler_changeTabName(tabNamge);
-  };
-
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll_hideNavBar);
   }
-
+  
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll_hideNavBar);
   }
-
-  handleScroll = () => {
+  
+  handleScroll_hideNavBar = () => {
     const { prevScrollpos } = this.state;
     const currentScrollPos = window.pageYOffset;
     let visible;
-
+    
     if (prevScrollpos > currentScrollPos) {
       visible = true;
     } else if (prevScrollpos < currentScrollPos) {
       visible = false;
     }
-
+    
     this.setState({
       prevScrollpos: currentScrollPos,
       visible
     });
   };
+  
+  _changeTabName = (event) => {
+    const tabNamge = event.target.value;
+    this.props._clickHandler_changeTabName(tabNamge);
+  };
 
   render() {
     return (
-      <div
-        className={classnames("navbar2", {
-          "navbar--hidden2": !this.state.visible
-        })}
-      >
-        <Link to="/"><button>Meetings</button></Link>
-        <Link to="cs"><button>Cs</button></Link>
+      <div className={classnames("navbar2", {"navbar--hidden2": !this.state.visible})}>
+        <Link to="/"><span className="navbar_btn">Meetings</span></Link>
+        <Link to="cs"><span className="navbar_btn">Cs</span></Link>
       </div>
     );
   }

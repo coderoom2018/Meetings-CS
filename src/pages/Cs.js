@@ -12,12 +12,11 @@ export default class Cs extends Component {
     tabName: "북클럽",
   }
 
-  componentDidMount = () => {
+  componentDidMount() {
     this._getData();
   }
 
   _getData = async () => {
-    
     const searchData = await module.searchData;
     const data = await searchData("csData", this.state.tabName)
 
@@ -37,14 +36,13 @@ export default class Cs extends Component {
       pathname: '/cs',
       search: `?category=${this.state.tabName}`,
     })
+
     this.setState({ data: data })
   }
 
   render() {
-
     return (
       <div id="cs_content">
-        <h1>Cs</h1>
         <div className="btn_container">
           <button className="btn" onClick={this._clickHandler_changeTab} value="북클럽" >북클럽</button>
           <button className="btn" onClick={this._clickHandler_changeTab} value="신청/환불">신청/환불</button>

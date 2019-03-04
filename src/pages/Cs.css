@@ -1,5 +1,9 @@
 #cs_content {
-  height: 2000px;
+  width: 80%;
+  height: 1000px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn_container {
@@ -9,4 +13,9 @@
 .btn {
   margin-bottom: 10px;
   margin-right: 10px;
+  font-weight: 400;
+  text-align: center;
+  color: #ff8906;
+  border: 3px solid #ff8906;
+  cursor: pointer;
 }

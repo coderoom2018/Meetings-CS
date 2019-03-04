@@ -4,6 +4,7 @@
 
 .faq_title {
   border-bottom: 1px dashed rgb(225, 225, 225);
+  padding: 15px 10px 15px 10px;
 }
 
 .faq_title-q {
@@ -16,10 +17,10 @@
 
 .faq_title-tapName {
   float: left;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 24px;
-    width: 80px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  width: 80px;
 }
 
 .faq_title-title {

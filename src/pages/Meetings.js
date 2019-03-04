@@ -9,7 +9,7 @@ export default class Meetings extends Component {
     data: []
   };
 
-  componentDidMount = () => {
+  componentDidMount() {
     this._getData();
   };
 
@@ -30,8 +30,8 @@ export default class Meetings extends Component {
   render() {
     return (
       <div id="meetings_content">
-        <h1>Meetings</h1>
         <SearchMeetings _searchMeetings={this._searchMeetings} />
+        
         {this.state.data.length < 1 ? (
           <div id="noResult">검색된 결과가 없습니다.</div>
         ) : (

@@ -1,14 +1,7 @@
 body {
   margin: 0;
-  /* padding-top: 70px; */
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 * {
-  /* box-shadow: 0px 0px 1px black; */
   box-sizing: border-box;
 }

@@ -2,14 +2,19 @@
   position: fixed;
   top: 0;
   width: 100%;
-  display: block;
-  transition: top 0.6s;
-  /* padding: 10px; */
+  transition: top 0.3s;
   height: 50px;
-  background-color: #333;
-  /* overflow: visible; */
+  background-color: rgb(255, 137, 6);
 }
 
 .navbar--hidden2 {
-  top: -50px;
+  top: -60px;
+}
+
+.navbar_btn {
+  padding: 10px 13px 20px 13px;
+  font-size: 20px;
+  font-weight: 400;
+  display: inline-block;
+  color: white;
 }
