@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import Meeting from './Meeting';
 import './MeetingsContainer.css';
+import Head from '../../Head';
 
 export default class MeetingsContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-
     return (
       <div id="container_content">
         <h3>MeetingsContainer</h3>
