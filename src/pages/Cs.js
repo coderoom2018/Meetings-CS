@@ -44,12 +44,12 @@ export default class Cs extends Component {
     return (
       <div id="cs_content">
         <div className="btn_container">
-          <button className="btn" onClick={this._clickHandler_changeTab} value="북클럽" >북클럽</button>
-          <button className="btn" onClick={this._clickHandler_changeTab} value="신청/환불">신청/환불</button>
-          <button className="btn" onClick={this._clickHandler_changeTab} value="독후감">독후감</button>
-          <button className="btn" onClick={this._clickHandler_changeTab} value="놀러가기">놀러가기</button>
-          <button className="btn" onClick={this._clickHandler_changeTab} value="이벤트">이벤트</button>
-          <button className="btn" onClick={this._clickHandler_changeTab} value="아지트">아지트</button>
+          <button className="category_btn" onClick={this._clickHandler_changeTab} value="북클럽" >북클럽</button>
+          <button className="category_btn" onClick={this._clickHandler_changeTab} value="신청/환불">신청/환불</button>
+          <button className="category_btn" onClick={this._clickHandler_changeTab} value="독후감">독후감</button>
+          <button className="category_btn" onClick={this._clickHandler_changeTab} value="놀러가기">놀러가기</button>
+          <button className="category_btn" onClick={this._clickHandler_changeTab} value="이벤트">이벤트</button>
+          <button className="category_btn" onClick={this._clickHandler_changeTab} value="아지트">아지트</button>
         </div>
         
         <div>

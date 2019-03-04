@@ -1,6 +1,6 @@
 #cs_content {
-  width: 80%;
-  height: 1000px;
+  width: 60%;
+  height: 100%;
   margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
@@ -8,14 +8,16 @@
 
 .btn_container {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.btn {
+.category_btn {
   margin-bottom: 10px;
   margin-right: 10px;
   font-weight: 400;
   text-align: center;
   color: #ff8906;
-  border: 3px solid #ff8906;
+  border: 1px solid #ff8906;
   cursor: pointer;
 }
