@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Meetings.css";
 import MeetingContainer from "../components/Meetings/MeetingsContainer";
-import module from "../utilities";
+import {getData, searchMeetings} from "../utilities";
 import SearchMeetings from "../components/Meetings/SearchMeetings";
 
 export default class Meetings extends Component {
@@ -14,16 +14,12 @@ export default class Meetings extends Component {
   };
 
   _getData = async () => {
-    const getData = await module.getData;
     const data = await getData("meetingsData");
-
     this.setState({ data });
   };
 
   _searchMeetings = async target => {
-    const searchMeetings = await module.searchMeeings;
-    const data = await searchMeetings("meetingsData", `${target}`);
-
+    const data = await searchMeetings(`${target}`);
     this.setState({ data });
   };
 

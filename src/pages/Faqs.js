@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import './Cs.css';
-import FaqContainer from '../components/Cs/FaqContainer';
-import module from '../utilities';
+import './Faqs.css';
+import FaqContainer from '../components/Faq/FaqContainer';
+import {getData} from '../utilities';
 import { createBrowserHistory } from 'history';
 
 const history = createBrowserHistory();
 
-export default class Cs extends Component {
+export default class Faqs extends Component {
   state = {
     data: [],
-    tabName: "북클럽",
   }
 
   componentDidMount() {
@@ -17,24 +16,17 @@ export default class Cs extends Component {
   }
 
   _getData = async () => {
-    const getData = await module.getData;
-    const data = await getData("csData", this.state.tabName)
-
+    const data = await getData("faqData", "북클럽")
     this.setState({ data })
   }
   
   _clickHandler_changeTab = async (event) => {
-    this.setState({ display: "none" })
     const tabName = event.target.value;
-
-    this.setState({ tabName: tabName })
-
-    const getData = await module.getData;
-    const data = await getData("csData", this.state.tabName)
+    const data = await getData("faqData", tabName)
     
     history.push({
-      pathname: '/cs',
-      search: `?category=${this.state.tabName}`,
+      pathname: '/faq',
+      search: `?category=${tabName}`,
     })
 
     this.setState({ data: data })
