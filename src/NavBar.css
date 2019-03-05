@@ -1,0 +1,21 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+  height: 60px;
+  background-color: rgb(255, 137, 6);
+}
+
+.navbar--hidden {
+  top: -70px;
+  transition: top 0.3s;
+}
+
+.navbar_btn {
+  padding: 20px 13px 20px 13px;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  color: white;
+}
