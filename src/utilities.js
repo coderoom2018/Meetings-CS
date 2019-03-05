@@ -1,41 +1,34 @@
-export default module = function() {
-
-  async function getData (file, category) {
-    const res = await fetch(`/${file}.json`);
-    let data = await res.json();
-
-    if (category !== undefined) {
-			let newData = [];
-
-			for (var i = 0; i < data.data.length; i++) {
-				if (data.data[i].category === category) {
-					await newData.push(data.data[i])
-				}
-			}
-			data = await newData
-
-			return data
-		}
-		
-    return data.data;
-	}
+export async function getData(file, category) {
+	let res;
+	let jsonData;
+	let data;
+	let categoryData;
 	
-	async function searchMeeings (file, target) {
-		const res = await fetch(`/${file}.json`);
-		let data = await res.json();
-		let newData = [];
-
-		for (var i = 0; i < data.data.length; i++) {
-			if (data.data[i].header_title.includes(target)) {
-				newData.push(data.data[i])
-			}
-		}
-		data = await newData;
-
-		return data
+	switch (file) {
+		case 'faqData':
+			res = await fetch(`/faqData.json`);
+			jsonData = await res.json();
+			data = jsonData.data;
+			categoryData = data.filter(data => {
+				return data.category === category;
+			})
+			return categoryData;
+		default:
+			res = await fetch(`/meetingsData.json`);
+			jsonData = await res.json();
+			data = jsonData.data;
+			return data
 	}
+}
 
-  return {
-    getData, searchMeeings
-  }
-}()
+export async function searchMeetings(target) {
+  const res = await fetch(`/meetingsData.json`);
+  const jsonData = await res.json();
+  const data = jsonData.data;
+
+  const newData = data.filter(meeting => {
+    return meeting.header_title.includes(target);
+  });
+
+  return newData;
+}
