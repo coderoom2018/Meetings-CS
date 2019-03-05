@@ -8,9 +8,7 @@ export default class SearchMeetings extends Component {
 
   _clickHandler_searchMeetings = () => {
     const target = this.state.inputValue;
-
     this.props._searchMeetings(target);
-
     this.setState({ inputValue: "" })
   };
 
