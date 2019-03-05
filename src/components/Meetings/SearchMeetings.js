@@ -8,9 +8,7 @@ export default class SearchMeetings extends Component {
 
   _clickHandler_searchMeetings = () => {
     const target = this.state.inputValue;
-
     this.props._searchMeetings(target);
-
     this.setState({ inputValue: "" })
   };
 
@@ -32,8 +30,9 @@ export default class SearchMeetings extends Component {
       <div id="search_content">
         <div className="searchBar_container">
           <input
+            className="search_input"
             type="text"
-            placeholder="검색어를 입력하세요"
+            placeholder="클럽명 검색"
             onChange={this._updateInputValue}
             value={this.state.inputValue}
             onKeyPress={this._keyPressHandler__searchMeetings}

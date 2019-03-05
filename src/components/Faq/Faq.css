@@ -15,7 +15,7 @@
   width: 20px;
 }
 
-.faq_title-tapName {
+.faq_title-categoryName {
   float: left;
   font-size: 14px;
   font-weight: 600;
@@ -31,4 +31,5 @@
 .faq_description {
   border-top: 1px dashed rgb(225, 225, 225);
   padding: 20px 20px 40px 125px !important;
+  transition: 1000ms;
 }

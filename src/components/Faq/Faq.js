@@ -13,7 +13,7 @@ export default class Faq extends Component {
     };
   }
 
-  _clickHandler_changeDisplay = title => {
+  _clickHandler_changeDisplay = (title) => {
     const faq = this.props.faq;
 
     if (title === faq.title && this.state.display === "none") {
@@ -25,7 +25,7 @@ export default class Faq extends Component {
     }
 
     history.push({
-      pathname: "/cs",
+      pathname: "/faq",
       search: `?category=${faq.category}&id=${faq.id}`
     });
   };
@@ -40,18 +40,17 @@ export default class Faq extends Component {
           onClick={() => this._clickHandler_changeDisplay(faq.title)}
         >
           <span className="faq_title-q">Q.</span>
-          <span className="faq_title-tapName">{`[${faq.category}]`}</span>
+          <span className="faq_title-categoryName">{`[${faq.category}]`}</span>
           <span className="faq_title-title">{faq.title}</span>
         </div>
 
+       
         <div
           id={faq.title}
           className="faq_description"
-          style={{ display: `none` }}
-        >
-          <div><p>{faq.description}</p></div>
+          style={{ display: `none` }}><p>{faq.description}</p></div>
         </div>
-      </div>
+
     );
   }
 }

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./Head.css";
-import classnames from "classnames";
+import "./NavBar.css";
 
 export default class Head extends Component {
   constructor(props) {
@@ -22,10 +21,10 @@ export default class Head extends Component {
   }
   
   handleScroll_hideNavBar = () => {
-    const { prevScrollpos } = this.state;
+    const prevScrollpos = this.state.prevScrollpos;
     const currentScrollPos = window.pageYOffset;
     let visible;
-    
+
     if (prevScrollpos > currentScrollPos) {
       visible = true;
     } else if (prevScrollpos < currentScrollPos) {
@@ -45,9 +44,9 @@ export default class Head extends Component {
 
   render() {
     return (
-      <div className={classnames("navbar2", {"navbar--hidden2": !this.state.visible})}>
-        <Link to="/"><span className="navbar_btn">Meetings</span></Link>
-        <Link to="cs"><span className="navbar_btn">Cs</span></Link>
+      <div className={this.state.visible ? "navbar" : "navbar navbar--hidden"}>
+        <Link to="/"><span className="navbar_btn">독서 모임</span></Link>
+        <Link to="faq"><span className="navbar_btn">자주 묻는 질문</span></Link>
       </div>
     );
   }
