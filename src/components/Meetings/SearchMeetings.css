@@ -1,0 +1,19 @@
+.searchBar_container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search_input {
+  padding: 6px 12px 6px 12px;
+  font-size: 16px;
+}
+
+.search_btn {
+  background: #ff8906;
+  border-color: #ff8906;
+  display: block;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px 12px 6px 12px;
+}

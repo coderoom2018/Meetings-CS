@@ -1,0 +1,13 @@
+#meetings_content {
+  width: 60%;
+  height: 100%;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#noResult {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 300px;
+}
