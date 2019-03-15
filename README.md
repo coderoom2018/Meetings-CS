@@ -20,5 +20,7 @@
 
 ## Components Structure
 ![Alt text](Meetings&Cs_structure.jpg)
+![Alt text](Meetings.jpg)
+![Alt text](Cs.jpg)
 
 
